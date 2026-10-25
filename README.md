@@ -24,21 +24,21 @@ Templates for `DECISIONS.md`, `JOURNAL.md` and per-feature specs come with `crea
 
 ## What's in this repo
 
-Two skills, both original work here:
+Three skills, all original work here:
 
 | Folder | Job |
 |---|---|
 | `kickoff/` | The orchestrator. Sequencing, handoffs, the no-go check. Thin by design. |
 | `research/` | Stage 2. Parallel tracks, source policy, confidence tags, a self-critique loop. |
+| `creator/` | Stage 1 checklist, Stage 3 generation. Ships the `devkit/` templates. |
 
-Two more skills do the actual work at Stages 1 and 3. They live in their own repos and this one doesn't copy them:
+One more skill does the interview at Stage 1. It lives in its own repo and this one doesn't copy it:
 
 | Skill | Used at | Source |
 |---|---|---|
 | `grill-me` | Stage 1 interview | [mattpocock/skills](https://github.com/mattpocock/skills) by Matt Pocock |
-| `creator` | Stage 1 checklist, Stage 3 generation | [vibecodoor/creator](https://github.com/vibecodoor/creator) |
 
-Installing from source means you get their updates and their authors keep their credit.
+Installing from source means you get its updates and its author keeps the credit.
 
 ## Install
 
@@ -48,12 +48,11 @@ Paste this into Claude Code, or whatever agent you use:
 Install the kickoff pipeline for me. It's four skills that go in my skills
 directory (~/.claude/skills/ for Claude Code, one folder each).
 
-Two come from https://github.com/vibecodoor/kickoff. Copy its `kickoff/` and
-`research/` folders.
+Three come from https://github.com/vibecodoor/kickoff. Copy its `kickoff/`,
+`research/` and `creator/` folders.
 
-Two come from their own repos:
+One comes from its own repo:
   grill-me    https://github.com/mattpocock/skills (skills/productivity/grill-me)
-  creator     https://github.com/vibecodoor/creator
 
 Skip anything I already have and tell me which ones you skipped. Then confirm
 the `kickoff` skill is available.
@@ -64,7 +63,7 @@ If you'd rather run the commands yourself:
 ```bash
 npx degit vibecodoor/kickoff/kickoff ~/.claude/skills/kickoff
 npx degit vibecodoor/kickoff/research ~/.claude/skills/research
-npx degit vibecodoor/creator ~/.claude/skills/creator
+npx degit vibecodoor/kickoff/creator ~/.claude/skills/creator
 npx degit mattpocock/skills/skills/productivity/grill-me ~/.claude/skills/grill-me
 ```
 
