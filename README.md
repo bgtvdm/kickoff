@@ -48,7 +48,7 @@ Paste this into Claude Code, or whatever agent you use:
 Install the kickoff pipeline for me. It's four skills that go in my skills
 directory (~/.claude/skills/ for Claude Code, one folder each).
 
-Three come from https://github.com/vibecodoor/kickoff. Copy its `kickoff/`,
+Three come from https://github.com/bgtvdm/kickoff. Copy its `kickoff/`,
 `research/` and `creator/` folders.
 
 One comes from its own repo:
@@ -61,9 +61,9 @@ the `kickoff` skill is available.
 If you'd rather run the commands yourself:
 
 ```bash
-npx degit vibecodoor/kickoff/kickoff ~/.claude/skills/kickoff
-npx degit vibecodoor/kickoff/research ~/.claude/skills/research
-npx degit vibecodoor/kickoff/creator ~/.claude/skills/creator
+npx degit bgtvdm/kickoff/kickoff ~/.claude/skills/kickoff
+npx degit bgtvdm/kickoff/research ~/.claude/skills/research
+npx degit bgtvdm/kickoff/creator ~/.claude/skills/creator
 npx degit mattpocock/skills/skills/productivity/grill-me ~/.claude/skills/grill-me
 ```
 
