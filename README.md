@@ -1,5 +1,7 @@
 # Kickoff
 
+[![License: MIT](https://img.shields.io/badge/license-MIT-3b3431?style=flat-square)](LICENSE)
+
 A pipeline for starting a new project. Three stages run in order: an interview to pin down the idea, deep research, then file generation.
 
 ```text
@@ -42,30 +44,29 @@ Installing from source means you get its updates and its author keeps the credit
 
 ## Install
 
-Paste this into Claude Code, or whatever agent you use:
+### With an AI agent
 
+Paste this into Claude Code, Codex, Hermes or any agent that can run commands on your computer:
+
+```text
+Install the kickoff pipeline. It's four skills.
+1. Run: npx skills add bgtvdm/kickoff -g --skill '*'
+   (installs kickoff, research and creator from https://github.com/bgtvdm/kickoff)
+2. Run: npx skills add mattpocock/skills -g --skill grill-me
+3. Skip any skill I already have and tell me which ones you skipped.
+4. Check that each of the four folders has a SKILL.md directly inside,
+   then tell me to start a new session so they load.
+To update later: npx skills update.
 ```
-Install the kickoff pipeline for me. It's four skills that go in my skills
-directory (~/.claude/skills/ for Claude Code, one folder each).
 
-Three come from https://github.com/bgtvdm/kickoff. Copy its `kickoff/`,
-`research/` and `creator/` folders.
-
-One comes from its own repo:
-  grill-me    https://github.com/mattpocock/skills (skills/productivity/grill-me)
-
-Skip anything I already have and tell me which ones you skipped. Then confirm
-the `kickoff` skill is available.
-```
-
-If you'd rather run the commands yourself:
+### By hand
 
 ```bash
-npx degit bgtvdm/kickoff/kickoff ~/.claude/skills/kickoff
-npx degit bgtvdm/kickoff/research ~/.claude/skills/research
-npx degit bgtvdm/kickoff/creator ~/.claude/skills/creator
-npx degit mattpocock/skills/skills/productivity/grill-me ~/.claude/skills/grill-me
+npx skills add bgtvdm/kickoff -g --skill '*'
+npx skills add mattpocock/skills -g --skill grill-me
 ```
+
+The [cross-agent installer](https://github.com/vercel-labs/skills) puts each skill where your agent looks for it. Drop `-g` to install for the current project only.
 
 Then open a project and say `kickoff: <your idea>`.
 
